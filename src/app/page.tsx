@@ -85,7 +85,7 @@ export default function Home() {
       <header className={`fixed w-full z-50 transition-all duration-300`}>
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-          <Image src="./images/acm.svg" alt="ACM logo" width={64} height={64} />
+          <Image src="/acm.svg" alt="ACM logo" width={64} height={64} />
             <span className="font-archivo font-bold text-xl text-black">at Maastricht University</span>
           </div>
           
@@ -188,10 +188,10 @@ export default function Home() {
             <Github className="w-10 h-10 inline text-black" />
           </a>
           <a href="https://discord.com/invite/ghpWe7wawV" className="text-white hover:bg-gray-200 transition-colors">
-            <img src="./images/discord.svg" className="w-10 h-10 inline" />
+            <img src="/discord.svg" className="w-10 h-10 inline" />
           </a>
           <a href="https://ctftime.org/team/365940" className="text-white hover:bg-gray-200 transition-colors">
-            <img src="./images/ctftime.png" className="w-10 h-10 inline" />
+            <img src="/ctftime.png" className="w-10 h-10 inline" />
           </a>
         </div>
       </section>

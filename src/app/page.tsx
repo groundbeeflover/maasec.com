@@ -79,7 +79,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen text-black bg-gradient-to-b from-gray-100 to-gray-300">
+    <div className="min-h-screen text-black bg-white">
 
       {/* Header */}
       <header className={`fixed w-full z-50 transition-all duration-300`}>

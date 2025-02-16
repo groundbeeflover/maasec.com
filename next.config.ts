@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   basePath: "/maasec.com",
   output: 'export',
   reactStrictMode: true,
+  path: "/",
 };
 
 module.exports = nextConfig;

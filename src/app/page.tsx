@@ -1,17 +1,18 @@
 'use client'
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { Laptop, Lightbulb, Book, Monitor, Menu, X, Terminal, Shield, Code, Users, Send, Github, Disc, Instagram, Twitter, Linkedin } from "lucide-react";
+import { /*useState, useEffect*/} from "react";
+import { Laptop, Lightbulb, Book, Monitor, Terminal,Users, Github} from "lucide-react";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  //const [_isMenuOpen, _setIsMenuOpen] = useState(false);
+  //const [_scrolled, _setScrolled] = useState(false);
+  //const [_activeSection, _setActiveSection] = useState("");
 
 
+  /*
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      set_scrolled(window.scrollY > 50);
       
       // Get current section
       const sections = document.querySelectorAll("section[id]");
@@ -34,6 +35,7 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  */
 
   const navItems = [
     { label: "About", id: "about" },
@@ -80,74 +82,46 @@ export default function Home() {
     <div className="min-h-screen text-black bg-gradient-to-b from-gray-100 to-gray-300">
 
       {/* Header */}
-      <header className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md" : "bg-transparent"
-      }`}>
+      <header className={`fixed w-full z-50 transition-all duration-300`}>
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
           <Image src="/acm.svg" alt="ACM logo" width={64} height={64} />
-            <span className="archivo font-bold text-xl text-black">at Maastricht University</span>
+            <span className="font-archivo font-bold text-xl text-black">at Maastricht University</span>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8 archivo">
+          <div className="hidden md:flex gap-8 font-archivo">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`hover:text-black transition-colors border-b-2 ${
-                  activeSection === item.id
-                    ? "border-black"
-                    : "border-transparent"
-                }`}
+                className={`hover:text-black transition-colors border-b-2}`}
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-black"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </nav>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden absolute w-full bg-white/95 border-t border-black/20">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="block px-4 py-2 hover:bg-black-400/10 archivo"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        )}
       </header>
 
       {/* Hero Section remains the same */}
       <section className="min-h-screen flex items-center relative overflow-hidden">
         {/* ... Hero content remains the same ... */}
         <div className="container mx-auto px-4 py-20 text-center relative -mt-32">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 archivo">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-archivo">
             <span className="text-black block">ACM Student Chapter</span>
             <span className="text-black block">MAASEC</span>
             <span className="animate-pulse"></span>
           </h1>
-          <p className="text-xl md:text-2xl text-black mb-8 archivo">
+          <p className="text-xl md:text-2xl text-black mb-8 font-archivo">
             Empowering students through technology and cybersecurity education
           </p>
           <div className="flex gap-4 justify-center">
             <a
               href="#contact"
-              className="group bg-white/100 border border-gray-700 px-8 py-3 rounded hover:border-black hover:text-black transition-all duration-300 archivo"
+              className="group bg-white/100 border border-gray-700 px-8 py-3 rounded hover:border-black hover:text-black transition-all duration-300 font-archivo"
             >
               Join Operation
             </a>
@@ -158,11 +132,11 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 relative -mt-64">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center archivo text-black-400">
+          <h2 className="text-3xl font-bold mb-8 text-center font-archivo text-black-400">
              About Us
           </h2>
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg text-black mb-6 archivo">
+            <p className="text-lg text-black mb-6 font-archivo">
               We are a group of students and professionals united under the ACM banner, 
               dedicated to fostering a community of learners and innovators. 
               Our mission is to promote hands-on experience, collaborative learning, 
@@ -176,7 +150,7 @@ export default function Home() {
       {/* Operations Section (previously What We Do) */}
       <section id="operations" className="py-20 relative bg-white/100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center archivo text-black">
+          <h2 className="text-3xl font-bold mb-12 text-center font-archivo text-black">
             Operations
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -188,7 +162,7 @@ export default function Home() {
                 <div className="transform group-hover:scale-110 transition-transform duration-300">
                   {activity.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-4 archivo text-black-400">
+                <h3 className="text-xl font-semibold mb-4 font-archivo text-black-400">
                   {activity.title}
                 </h3>
                 <p className="text-black">{activity.description}</p>
@@ -203,10 +177,10 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 relative bg-white/100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8 archivo text-black">
+          <h2 className="text-3xl font-bold mb-8 font-archivo text-black">
              Join The Operation
           </h2>
-          <p className="text-xl text-black mb-8 archivo">
+          <p className="text-xl text-black mb-8 font-archivo">
             Ready to explore the frontiers of technology and innovation?
           </p>
 
@@ -227,7 +201,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 archivo text-white">
+              <h3 className="text-xl font-semibold mb-4 font-archivo text-white">
                 ACM Student Chapter of Maastricht University
               </h3>
               <p className="text-white">
@@ -244,7 +218,7 @@ export default function Home() {
           </div>
           <div className="mt-8 pt-8 border-t border-white/20 text-center">
             <p className="text-white">© {new Date().getFullYear()} ACM Student Chapter of Maastricht University</p>
-            <p className="mt-2 text-gray-400 archivo">{">//"} Made with ❤️ by irdi and dimitri @ maasec</p>
+            <p className="mt-2 text-gray-400 font-archivo">{">//"} Made with ❤️ by irdi and dimitri @ maasec</p>
           </div>
         </div>
       </footer>

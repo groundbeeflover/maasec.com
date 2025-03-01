@@ -23,7 +23,7 @@ export default function Footer () {
                 </div>
                 <div className="mt-8 pt-8 border-t border-white/20 text-center">
                     <p className="text-white">© {new Date().getFullYear()} ACM Student Chapter of Maastricht University</p>
-                    <p className="mt-2 text-gray-400 font-archivo">{">//"} Made with ❤️ by irdi and dimitri @ maasec</p>
+                    <p className="mt-2 text-gray-400 font-archivo">{">//"} Made with ❤️ by irdi, dimitri, maksym and gergo @ maasec</p>
                 </div>
             </div>
         </footer>

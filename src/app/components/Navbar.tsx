@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const navItems = [
     { label: "FAQ", id: "/maasec.com/FAQ" },
-    { label: "Calendar", id: "/maasec.com/Calendar" },
+    { label: "Our Events", id: "/maasec.com/Calendar" },
 ];
 
 export default function Navbar() {
     return (
-        <header className="fixed w-full z-50 transition-all duration-300 bg-white shadow-md">
+        <header className="w-full z-50 transition-all duration-300 bg-white shadow-md">
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     {/* TODO: navbar logo broke... fix that */}

@@ -53,6 +53,8 @@ const Calendar = () => {
 
   return (
     <>
+
+      <Navbar></Navbar>
       <h1
         className="sm:pt-10 pt-4 sm:pb-0 pb-6
         text-center text-3xl
@@ -62,32 +64,6 @@ const Calendar = () => {
       >
         Upcoming Events
       </h1>
-
-      <div className="flex flex-col md:flex-row gap-4 p-3 sm:p-20">
-        {/* Calendar with all events */}
-        {/* <div className="w-full md:w-2/3">
-          <FullCalendar
-            plugins={[
-              dayGridPlugin,
-              timeGridPlugin,
-              listPlugin,
-              interactionPlugin,
-            ]}
-            initialView="dayGridMonth"
-            headerToolbar={{
-              left: "prev,next today",
-              center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
-            }}
-            events={CALENDARDATA}
-            eventClassNames={() => "cursor-pointer"}
-            eventClick={handleEventClick}
-            height="auto"
-            buttonText={{
-              listMonth: "🚨 Upcoming",
-            }}
-          />
-        </div> */}
 
         <div className="flex flex-col md:flex-row gap-4 p-3 sm:p-20">
           {/* Calendar with all events */}
@@ -128,8 +104,7 @@ const Calendar = () => {
             )}
           </div>
         </div>
-        {/* <Footer/> */}
-      </div>
+      <Footer />
     </>
   );
 };

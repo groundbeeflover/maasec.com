@@ -13,7 +13,7 @@ export default function Navbar() {
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     {/* TODO: navbar logo broke... fix that */}
-                    <Image src="/acm.svg" alt="ACM logo" width={64} height={64} />
+                    <Image src="../../public/acm.svg" alt="ACM logo" width={64} height={64} />
                     <span className="font-archivo font-bold text-xl text-black">
             at Maastricht University
           </span>
@@ -25,7 +25,7 @@ export default function Navbar() {
                         <a
                             key={item.id}
                             href={`#${item.id}`}
-                            className="hover:text-black transition-colors border-b-2"
+                            className="hover:text-black transition-colors border-b-2 text-gray-500"
                         >
                             {item.label}
                         </a>

@@ -2,19 +2,24 @@
 import React from 'react'
 import {Body, H1} from "../design-system/formatting"
 import {Accordion} from "../components/accordion"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const FAQ = () => {
     return (
-        <Body>
+        <div className="bg-white">
+            <Navbar/>
+            <Body>
             <H1>FAQ</H1>
-            {FAQDATA.map((data, i) =>
-                <div key={i}>
-                    <Accordion
-                        Header={data.question}
-                        Main={data.answer}>
-                    </Accordion>
-                </div>)}
-        </Body>
+            {FAQDATA.map((data, i) => <div key={i}>
+                <Accordion
+                    Header={data.question}
+                    Main={data.answer}>
+                </Accordion>
+            </div>)}
+            </Body>
+            <Footer/>
+        </div>
     )
 }
 export default FAQ

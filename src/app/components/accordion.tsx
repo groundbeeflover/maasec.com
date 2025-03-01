@@ -15,12 +15,12 @@ export const Accordion = (props: AccordionProps) => {
                 className = "flex flex-row items-center justify-between gap-4"
                 onClick={() => setShowMain(!showMain)}
             >
-                <span className="text-2xl">{props.Header}</span>
-                <span className="text-gray-500 text-xl">
+                <span className="text-2xl text-black">{props.Header}</span>
+                <span className="text-gray-500 text-2xl">
                     {showMain ? "↑":"↓"}
                 </span>
             </button>
-            {showMain && <p className="border-t py-4 text-lg">{props.Main}</p>}
+            {showMain && <p className="border-t py-4 text-lg text-black">{props.Main}</p>}
         </div>
     )
 }

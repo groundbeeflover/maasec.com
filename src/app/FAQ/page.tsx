@@ -12,7 +12,6 @@ const FAQ = () => {
                     <Accordion
                         Header={data.question}
                         Main={data.answer}>
-
                     </Accordion>
                 </div>)}
         </Body>

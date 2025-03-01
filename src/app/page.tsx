@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { /*useState, useEffect*/} from "react";
 import { Laptop, Lightbulb, Book, Monitor, Terminal,Users, Github} from "lucide-react";
+import Navbar from "../app/components/Navbar";
 
 export default function Home() {
   //const [_isMenuOpen, _setIsMenuOpen] = useState(false);
@@ -36,11 +36,6 @@ export default function Home() {
   }, []);
   */
 
-  const navItems = [
-    { label: "About", id: "about" },
-    { label: "Operations", id: "operations" },
-    { label: "Contact", id: "contact" }
-  ];
 
   // Rest of your data constants remain the same
 
@@ -78,55 +73,29 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen text-black bg-white">
+      <div className="min-h-screen text-black bg-white">
+        <Navbar /> {/* Import the Navbar component */}
 
-      {/* Header */}
-      <header className={`fixed w-full z-50 transition-all duration-300`}>
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-          <Image src="acm.svg" alt="ACM logo" width={64} height={64} />
-            <span className="font-archivo font-bold text-xl text-black">at Maastricht University</span>
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8 font-archivo">
-            {navItems.map((item) => (
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center relative overflow-hidden">
+          <div className="container mx-auto px-4 py-20 text-center relative -mt-32">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-archivo">
+              <span className="text-black block">ACM Student Chapter</span>
+              <span className="text-black block">MAASEC</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-black mb-8 font-archivo">
+              Empowering students through technology and cybersecurity education
+            </p>
+            <div className="flex gap-4 justify-center">
               <a
-                key={item.id}
-                href={`#${item.id}`}
-                className={`hover:text-black transition-colors border-b-2}`}
+                  href="#contact"
+                  className="group bg-white border border-gray-700 px-8 py-3 rounded hover:border-black hover:text-black transition-all duration-300 font-archivo"
               >
-                {item.label}
+                Join Operation
               </a>
-            ))}
+            </div>
           </div>
-
-        </nav>
-
-      </header>
-
-      {/* Hero Section remains the same */}
-      <section className="min-h-screen flex items-center relative overflow-hidden">
-        {/* ... Hero content remains the same ... */}
-        <div className="container mx-auto px-4 py-20 text-center relative -mt-32">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-archivo">
-            <span className="text-black block">ACM Student Chapter</span>
-            <span className="text-black block">MAASEC</span>
-            <span className="animate-pulse"></span>
-          </h1>
-          <p className="text-xl md:text-2xl text-black mb-8 font-archivo">
-            Empowering students through technology and cybersecurity education
-          </p>
-          <div className="flex gap-4 justify-center">
-            <a
-              href="#contact"
-              className="group bg-white/100 border border-gray-700 px-8 py-3 rounded hover:border-black hover:text-black transition-all duration-300 font-archivo"
-            >
-              Join Operation
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* About Section */}
       <section id="about" className="py-20 relative -mt-64">

@@ -16,7 +16,7 @@ export const Accordion = (props: AccordionProps) => {
                 onClick={() => setShowMain(!showMain)}
             >
                 <span className="text-2xl">{props.Header}</span>
-                <span className="text-gray-500 text-xl">{props.Main}
+                <span className="text-gray-500 text-xl">
                     {showMain ? "↑":"↓"}
                 </span>
             </button>

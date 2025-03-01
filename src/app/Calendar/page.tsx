@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import { Body, H1 } from "../design-system/formatting";
+ import React, { useState } from "react";
+import {H1 } from "../design-system/formatting";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid"; 
-import listPlugin from "@fullcalendar/list"; 
+import timeGridPlugin from "@fullcalendar/timegrid";
+import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const CALENDARDATA = [
   {
@@ -25,7 +27,7 @@ const CALENDARDATA = [
   {
     id: "2",
     title: "Pipi popo",
-    start: "2025-03-10", 
+    start: "2025-03-10",
     description: "The most exiting of all",
   },
 ];
@@ -49,12 +51,13 @@ const Calendar = () => {
 
   return (
     <div className="flex gap-4 p-4">
+        <Navbar />
       {/* Calendar with all events */}
       <div className="w-3/4">
         <H1>Upcoming Events</H1>
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin]}
-          initialView="dayGridMonth"    
+          initialView="dayGridMonth"
           headerToolbar={{
             left: "prev,next today",
             center: "title",
@@ -65,7 +68,7 @@ const Calendar = () => {
           eventClick={handleEventClick}
           height="auto"
           buttonText={{
-            listMonth: "🚨 Upcoming", 
+            listMonth: "🚨 Upcoming",
           }}
         />
       </div>
@@ -83,6 +86,7 @@ const Calendar = () => {
           <p className="text-gray-500">Click on an event to see details</p>
         )}
       </div>
+        <Footer/>
     </div>
   );
 };

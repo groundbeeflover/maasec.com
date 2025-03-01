@@ -9,7 +9,7 @@ export const H1 = ({children,}: {children: React.ReactNode}) => {
     return (
         <h1 className="pt-10 pb-12
         text-center text-5xl
-        lg:text-6xl
+        lg:text-5xl
         font-semibold tracking-wide">{children}</h1>
     )
 }

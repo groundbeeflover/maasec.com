@@ -1,6 +1,8 @@
 import { /*useState, useEffect*/} from "react";
 import { Laptop, Lightbulb, Book, Monitor, Terminal,Users, Github} from "lucide-react";
 import Navbar from "../app/components/Navbar";
+import Image from "next/image";
+import Footer from "../app/components/Footer";
 
 export default function Home() {
   //const [_isMenuOpen, _setIsMenuOpen] = useState(false);
@@ -74,7 +76,7 @@ export default function Home() {
 
   return (
       <div className="min-h-screen text-black bg-white">
-        <Navbar /> {/* Import the Navbar component */}
+        <Navbar />
 
         {/* Hero Section */}
         <section className="min-h-screen flex items-center relative overflow-hidden">
@@ -156,40 +158,15 @@ export default function Home() {
             <Github className="w-10 h-10 inline text-black" />
           </a>
           <a href="https://discord.com/invite/ghpWe7wawV" className="text-white hover:bg-gray-200 transition-colors">
-            <img src="discord.svg" className="w-10 h-10 inline" />
+            <Image src="/discord.svg" alt = "discord" className="w-10 h-10 inline" />
           </a>
           <a href="https://ctftime.org/team/365940" className="text-white hover:bg-gray-200 transition-colors">
-            <img src="ctftime.png" className="w-10 h-10 inline" />
+            <Image src="/ctftime.png" alt = "ctftime" className="w-10 h-10 inline" />
           </a>
         </div>
       </section>
 
-      {/* Footer remains the same */}
-      <footer className="bg-black py-12 border-t border-white/20 ">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 font-archivo text-white">
-                ACM Student Chapter of Maastricht University
-              </h3>
-              <p className="text-white">
-                Sharing our passion of computation.
-              </p>
-              <p className="mt-4 text-white">
-                <strong>Contact us:</strong> <a href="mailto:acm@maasec.com" className="text-blue-400">acm@maasec.com</a>
-              </p>
-            </div>
-            <div className="flex flex-col md:items-end">
-              <div className="space-x-4">
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-white/20 text-center">
-            <p className="text-white">© {new Date().getFullYear()} ACM Student Chapter of Maastricht University</p>
-            <p className="mt-2 text-gray-400 font-archivo">{">//"} Made with ❤️ by irdi and dimitri @ maasec</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -2,9 +2,8 @@ import React from 'react'
 import Image from "next/image";
 
 const navItems = [
-    { label: "About", id: "about" },
-    { label: "Operations", id: "operations" },
-    { label: "Contact", id: "contact" },
+    { label: "FAQ", id: "/maasec.com/FAQ" },
+    { label: "Calendar", id: "/maasec.com/Calendar" },
 ];
 
 export default function Navbar() {
@@ -24,8 +23,8 @@ export default function Navbar() {
                     {navItems.map((item) => (
                         <a
                             key={item.id}
-                            href={`#${item.id}`}
-                            className="hover:text-black transition-colors border-b-2"
+                            href={`${item.id}`}
+                            className="hover:text-black transition-colors border-b-2 text-gray-500"
                         >
                             {item.label}
                         </a>

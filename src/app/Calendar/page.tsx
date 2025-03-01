@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { Body, H1 } from "../design-system/formatting";
+import { H1 } from "../design-system/formatting";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const CALENDARDATA = [
   {
@@ -63,7 +65,7 @@ const Calendar = () => {
 
       <div className="flex flex-col md:flex-row gap-4 p-3 sm:p-20">
         {/* Calendar with all events */}
-        <div className="w-full md:w-2/3">
+        {/* <div className="w-full md:w-2/3">
           <FullCalendar
             plugins={[
               dayGridPlugin,
@@ -85,20 +87,48 @@ const Calendar = () => {
               listMonth: "🚨 Upcoming",
             }}
           />
-        </div>
+        </div> */}
 
-        {/* Event details on the right side (or on the bottom) */}
-        <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded-lg">
-          {selectedEvent ? (
-            <div>
-              <h2 className="text-xl font-bold">{selectedEvent.title}</h2>
-              <p className="text-gray-600">{selectedEvent.date}</p>
-              <p className="mt-2">{selectedEvent.description}</p>
-            </div>
-          ) : (
-            <p className="text-gray-500">Click on an event to see details.</p>
-          )}
+        <div className="flex flex-col md:flex-row gap-4 p-3 sm:p-20">
+          {/* Calendar with all events */}
+          <div className="w-full md:w-2/3">
+            <FullCalendar
+              plugins={[
+                dayGridPlugin,
+                timeGridPlugin,
+                listPlugin,
+                interactionPlugin,
+              ]}
+              initialView="dayGridMonth"
+              headerToolbar={{
+                left: "prev,next today",
+                center: "title",
+                right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+              }}
+              events={CALENDARDATA}
+              eventClassNames={() => "cursor-pointer"}
+              eventClick={handleEventClick}
+              height="auto"
+              buttonText={{
+                listMonth: "🚨 Upcoming",
+              }}
+            />
+          </div>
+
+          {/* Event details on the right side (or on the bottom) */}
+          <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded-lg">
+            {selectedEvent ? (
+              <div>
+                <h2 className="text-xl font-bold">{selectedEvent.title}</h2>
+                <p className="text-gray-600">{selectedEvent.date}</p>
+                <p className="mt-2">{selectedEvent.description}</p>
+              </div>
+            ) : (
+              <p className="text-gray-500">Click on an event to see details.</p>
+            )}
+          </div>
         </div>
+        {/* <Footer/> */}
       </div>
     </>
   );

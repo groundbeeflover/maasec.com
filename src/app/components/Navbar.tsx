@@ -2,8 +2,8 @@ import React from 'react'
 import Image from "next/image";
 
 const navItems = [
-    { label: "FAQ", id: "/maasec.com/FAQ" },
     { label: "Our Events", id: "/maasec.com/Calendar" },
+    { label: "FAQ", id: "/maasec.com/FAQ" },
 ];
 
 export default function Navbar() {
@@ -12,7 +12,7 @@ export default function Navbar() {
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     {/* TODO: navbar logo broke... fix that */}
-                    <Image src="/acm.svg" alt="ACM logo" width={64} height={64} />
+                    <Image src="./acm.svg" alt="ACM logo" width={64} height={64} />
                     <span className="font-archivo font-bold text-xl text-black">
             at Maastricht University
           </span>

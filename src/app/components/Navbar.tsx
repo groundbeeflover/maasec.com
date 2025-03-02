@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
-    { label: "Our Events", id: "/maasec.com/Calendar" },
-    { label: "FAQ", id: "/maasec.com/FAQ" },
+    { label: "Our Events", id: "/maasec.com/Calendar"},
+    { label: "FAQ", id: "/maasec.com/FAQ"},
 ];
 
 export default function Navbar() {
@@ -11,11 +12,12 @@ export default function Navbar() {
         <header className="w-full z-50 transition-all duration-300 bg-white shadow-md">
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
-                    {/* TODO: navbar logo broke... fix that */}
-                    <Image src="/maasec.com/acm.svg" alt="ACM logo" width={64} height={64} />
-                    <span className="font-archivo font-bold text-xl text-black">
-            at Maastricht University
-          </span>
+                    <Link href="/">
+                        <Image src="/maasec.com/acm.svg" alt="ACM logo" width={64} height={64} />
+                        <span className="font-archivo font-bold text-xl text-black">
+                            at Maastricht University
+                        </span>
+                    </Link>
                 </div>
 
                 {/* Desktop Navigation */}

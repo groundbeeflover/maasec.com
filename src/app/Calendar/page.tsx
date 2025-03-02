@@ -1,7 +1,9 @@
 "use client";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import React, { useState } from "react";
-import { H1 } from "../design-system/formatting";
+// import { H1 } from "../design-system/formatting";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -52,15 +54,15 @@ const Calendar = () => {
   };
 
   return (
-    <>
-
+    <div className="bg-white">
       <Navbar></Navbar>
       <h1
         className="sm:pt-10 pt-4 sm:pb-0 pb-6
         text-center text-3xl
         lg:text-2xl
         lg:text-4xl
-        font-semibold tracking-wide"
+        font-semibold tracking-wide
+        text-blue-900"
       >
         Upcoming Events
       </h1>
@@ -95,9 +97,9 @@ const Calendar = () => {
           <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded-lg">
             {selectedEvent ? (
               <div>
-                <h2 className="text-xl font-bold">{selectedEvent.title}</h2>
-                <p className="text-gray-600">{selectedEvent.date}</p>
-                <p className="mt-2">{selectedEvent.description}</p>
+                <h2 className="text-xl font-bold text-black">{selectedEvent.title}</h2>
+                <p className="text-black">{selectedEvent.date}</p>
+                <p className="mt-2 text-black">{selectedEvent.description}</p>
               </div>
             ) : (
               <p className="text-gray-500">Click on an event to see details.</p>
@@ -105,7 +107,7 @@ const Calendar = () => {
           </div>
         </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

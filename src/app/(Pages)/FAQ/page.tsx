@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
-import {Body, H1} from "../design-system/formatting"
-import {Accordion} from "../components/accordion"
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import {Body, H1} from "../../design-system/formatting"
+import {Accordion} from "../../components/accordion"
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const FAQ = () => {
     return (

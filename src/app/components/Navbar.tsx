@@ -5,6 +5,7 @@ import Link from "next/link";
 const navItems = [
     { label: "Our Events", id: "/maasec.com/Calendar"},
     { label: "FAQ", id: "/maasec.com/FAQ"},
+    { label: "Blog", id: "/maasec.com/Blog"},
 ];
 
 export default function Navbar() {
@@ -20,7 +21,6 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Desktop Navigation */}
                 <div className="hidden md:flex gap-8 font-archivo">
                     {navItems.map((item) => (
                         <a

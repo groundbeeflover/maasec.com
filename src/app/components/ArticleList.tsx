@@ -1,23 +1,27 @@
 import Link from 'next/link';
+import type {BlogItem} from "../../../types";
 
 type ListProps = {
-    Title: string,
-    Description: string,
-    Emoji: string
-    Destination: string
+    articles: BlogItem[];
 }
 export const ArticleList = (props: ListProps) => {
     return(
-        <div className="bg-white py-5 px-10 max-w-xl mx-auto">
-            <Link href={props.Destination}>
-                <button
-                    className="flex flex-row items-center justify-between gap-4"
-                >
-                    <span className="text-2xl text-black">{props.Title}</span>
-                </button>
-            </Link>
-            <p className="text-base inline-block">{props.Emoji} </p>
-            <p className="text-base text-gray-300 inline-block line-clamp-1">{props.Description}</p>
+        <div className="flex flex-col gap-2.5 text-lg">
+            {props.articles.map((article, id) => (
+                <Link
+                    key={id}
+                    href={`/Blog/${article.id}`}
+                    className="text-blue-900 hover:text-black
+                    transition duration-150">
+                    {article.title}
+                    <p className="text-base text-gray-500
+                     inline-block line-clamp-1">
+                        {article.emoji} {article.description}
+                    </p>
+                </Link>
+            ))}
+
         </div>
     )
 }
+

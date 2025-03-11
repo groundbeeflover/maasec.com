@@ -6,6 +6,7 @@ const navItems = [
     { label: "Our Events", id: "/maasec.com/Calendar"},
     { label: "FAQ", id: "/maasec.com/FAQ"},
     { label: "Blog", id: "/maasec.com/Blog"},
+    { label: "Announcements", id: "/maasec.com/Announcements"}
 ];
 
 export default function Navbar() {

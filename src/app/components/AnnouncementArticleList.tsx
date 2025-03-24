@@ -5,21 +5,23 @@ type ListProps = {
     articles: Announcement[];
 }
 export const AnnouncementArticleList = (props: ListProps) => {
-    return(
-        <div className="flex flex-col gap-2.5 text-lg">
+    return (
+        <div className="flex flex-col gap-2.5 text-lg items-center">
             {props.articles.map((article, id) => (
-                <Link
-                    key={id}
-                    href={`/Announcements/${article.id}`}
-                    className="text-blue-900 hover:text-black
+                    <div className="py-1 max-w-xl" key={id}>
+                        <Link
+                            href={`/Announcements/${article.id}`}
+                            className="text-blue-900 hover:text-black
                     transition duration-150">
-                    {article.title}
-                    <p className="text-base text-gray-500
-                     inline-block line-clamp-1">
-                        📢 {article.description}
-                    </p>
-                </Link>
-            ))}
+                            📢 {article.title}
+                        </Link>
+                        <p className="text-base text-gray-500
+                     inline-block line-clamp-1 py-0.5">
+                            {article.description}
+                        </p>
+                    </div>
+                )
+            )}
 
         </div>
     )

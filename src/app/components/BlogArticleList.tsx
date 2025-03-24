@@ -6,9 +6,9 @@ type ListProps = {
 }
 export const BlogArticleList = (props: ListProps) => {
     return(
-        <div className="flex flex-col gap-2.5 text-lg items-center">
+        <div className="flex flex-col gap-2.5 text-lg items-center pb-5">
             {props.articles.map((article, id) => (
-                <div key={id} className="max-w-xl py-1 pl-5">
+                <div key={id} className="max-w-3xl py-1 pl-5">
                     <Link
                         href={`/Blog/${article.id}`}
                         className="text-blue-900 hover:text-black

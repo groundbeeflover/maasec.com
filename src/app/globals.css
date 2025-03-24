@@ -51,7 +51,7 @@ body {
 }
 
 .article > pre{
-  @apply bg-neutral-950 text-black p-5 overflow-scroll;
+  @apply bg-neutral-950 text-neutral-50 p-5 overflow-scroll;
 }
 
 .article > blockquote {

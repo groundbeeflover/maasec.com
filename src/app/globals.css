@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: white;
+  --foreground: black;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -29,33 +29,33 @@ body {
   justify-content: space-between;
   gap: 10px;
 }
-
+/* styles for the markdown formatting */
 .article{
-  @apply flex flex-col gap-3 text-lg tracking-wide mb-20;
+  @apply flex flex-col gap-3 text-lg tracking-wide mb-20 bg-white;
 }
 
 .article > h1 {
-  @apply text-4xl text-center tracking-tight font-bold;
+  @apply text-4xl text-center tracking-tight font-bold text-blue-900;
 }
 
 .article > h2 {
-  @apply text-3xl tracking-tight font-semibold;
+  @apply text-3xl tracking-tight font-semibold text-blue-700;
 }
 
 .article > ol {
-  @apply list-decimal flex flex-col mx-10 gap-2;
+  @apply list-decimal flex flex-col mx-10 gap-2 text-black;
 }
 
 .article > ul {
-  @apply list-decimal flex flex-col mx-10 gap-2;
+  @apply list-decimal flex flex-col mx-10 gap-2 text-black;
 }
 
 .article > pre{
-  @apply bg-neutral-950 text-neutral-50 p-5 overflow-scroll;
+  @apply bg-neutral-950 text-black p-5 overflow-scroll;
 }
 
 .article > blockquote {
-  @apply pl-5 italic border-l-2 border-neutral-600 border-opacity-40;
+  @apply pl-5 italic border-l-2 border-neutral-600 border-opacity-40 text-black;
 }
 
 @media (max-width: 600px) {

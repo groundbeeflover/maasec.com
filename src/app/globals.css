@@ -58,6 +58,10 @@ body {
   @apply pl-5 italic border-l-2 border-neutral-600 border-opacity-40 text-black;
 }
 
+.article > p > image {
+  @apply w-0.5 mx-auto
+}
+
 @media (max-width: 600px) {
   .fc-toolbar {
     flex-direction: column;

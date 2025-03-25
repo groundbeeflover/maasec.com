@@ -25,6 +25,7 @@ export const getSortedBlogs = (): BlogItem[] => {
             emoji: metadata.data.emoji,
             date: metadata.data.date,
             description: metadata.data.description,
+            image: metadata.data.image,
         }
     })
 

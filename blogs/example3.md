@@ -3,9 +3,11 @@ title: "Why Cats Secretly Rule the World"
 date: 2025-03-10
 emoji: "🐱"
 description: "An exploration of how cats subtly dominate human society."
+image: "kitty1.png"
 ---
 
 # Why Cats Secretly Rule the World
+![Art](/kitty1.png)
 
 Dogs may be called "man’s best friend," but let’s be real—cats are running the show. They just let us think we're in charge.
 

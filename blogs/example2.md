@@ -3,9 +3,11 @@ title: "Coffee: The Liquid Motivation"
 date: 2025-03-10
 emoji: "☕"
 description: "A deep dive into why coffee is the ultimate productivity booster."
+image: "puppy2.png"
 ---
 
 # Coffee: The Liquid Motivation
+![Art](/puppy2.png)
 
 Ah, coffee—the magical elixir that fuels the world. Whether you're a casual drinker or a die-hard enthusiast, there's something comforting about that first sip in the morning.
 

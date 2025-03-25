@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
-    { label: "Our Events", id: "/maasec.com/Calendar"},
-    { label: "FAQ", id: "/maasec.com/FAQ"},
-    { label: "Blog", id: "/maasec.com/Blog"},
-    { label: "Announcements", id: "/maasec.com/Announcements"}
+    { label: "Our Events", id: "/Calendar"},
+    { label: "FAQ", id: "/FAQ"},
+    { label: "Blog", id: "/Blog"},
+    { label: "Announcements", id: "/Announcements"}
 ];
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     <Link href="/">
-                        <Image src="/maasec.com/acm.svg" alt="ACM logo" width={64} height={64} />
+                        <Image src="/acm.svg" alt="ACM logo" width={64} height={64} />
                         <span className="font-archivo font-bold text-xl text-black">
                             at Maastricht University
                         </span>

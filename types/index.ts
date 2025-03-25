@@ -4,6 +4,7 @@ export type BlogItem = {
     emoji: string
     date: string
     description: string
+    image: string
 }
 
 export type Announcement = {

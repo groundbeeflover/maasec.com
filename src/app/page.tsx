@@ -158,10 +158,10 @@ export default function Home() {
             <Github className="w-10 h-10 inline text-black" />
           </a>
           <a href="https://discord.com/invite/ghpWe7wawV" className="text-white hover:bg-gray-200 transition-colors">
-            <Image src="/maasec.com/discord.svg" alt = "discord" className="w-10 h-10 inline" width={64} height={64}  />
+            <Image src="/discord.svg" alt = "discord" className="w-10 h-10 inline" width={64} height={64}  />
           </a>
           <a href="https://ctftime.org/team/365940" className="text-white hover:bg-gray-200 transition-colors">
-            <Image src="/maasec.com/ctftime.png" alt = "ctftime" className="w-10 h-10 inline"  width={64} height={64}  />
+            <Image src="/ctftime.png" alt = "ctftime" className="w-10 h-10 inline"  width={64} height={64}  />
           </a>
         </div>
       </section>

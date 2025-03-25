@@ -3,10 +3,11 @@ title: "The Art of Doing Nothing"
 date: 2025-03-10
 emoji: "🛋️"
 description: "Embracing stillness in a world that glorifies busyness."
+image: "puppy1.png"
 ---
 
 # The Art of Doing Nothing
-
+![Art](/puppy1.png)
 In a world that glorifies busyness, the act of doing nothing has become a lost art. But what if I told you that embracing stillness could be the key to creativity and productivity?
 
 ## Why We Struggle with Doing Nothing
